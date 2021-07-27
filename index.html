@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sliding Ladder</title>
+    <style>
+      html,
+      body {
+        height: 100vh;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        color: #fff;
+        font: 1.5rem sans-serif;
+      }
+      input,
+      button {
+        font: 1.5rem sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h3>Sliding Ladder</h3>
+      Enter the location of point p (between 1-9):
+      <input type="number" name="point" id="point" min="1" max="9" value="4" />
+      <button id="start">Start</button>
+    </div>
+    <script src="js/svg.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
