@@ -21,7 +21,7 @@ document.getElementById("start").onclick = function () {
   // draw the wall
   paper
     .line(0, 0, 0, ladderHeight + groundHeight * 2)
-    .stroke({ color: "#600", width: groundHeight })
+    .stroke({ color: "#660000", width: groundHeight })
     .move(originX - groundHeight / 2, originY - ladderHeight - groundHeight);
 
   // draw the ground
@@ -32,7 +32,7 @@ document.getElementById("start").onclick = function () {
       originX + ladderHeight + 50,
       originY + groundHeight / 2
     )
-    .stroke({ color: "#060", width: groundHeight });
+    .stroke({ color: "#006600", width: groundHeight });
 
   // get the point's location on the ladder from the user input
   let pointOnLadder = +document.getElementById("point").value / 10;
@@ -48,7 +48,7 @@ document.getElementById("start").onclick = function () {
     var theta = Math.asin(count / ladderHeight);
 
     // slow down as angle increases
-    count += Math.floor(theta)>=1?0.25:3;
+    count += 3;
 
     var newX = originX + ladderHeight * Math.sin(theta);
     var newY = originY - ladderHeight * Math.cos(theta);
@@ -60,7 +60,7 @@ document.getElementById("start").onclick = function () {
     // plot the locus point
     paper
       .circle(4)
-      .fill("#ff0")
+      .fill("#ffff00")
       .move(locusX - 2, locusY - 2);
 
     // if old the ladder and point on the ladder exist remove them
@@ -74,7 +74,7 @@ document.getElementById("start").onclick = function () {
     
     pointOnTheLadder = paper
       .circle(16)
-      .fill("#f00")
+      .fill("#ff0000")
       .move(locusX - 8, locusY - 8);
 
     // when the ladder reaches ground stop
